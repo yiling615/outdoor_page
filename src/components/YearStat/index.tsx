@@ -60,7 +60,7 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
     >
       <section>
         <Stat value={year} description=" Journey" />
-        <Stat value={runs.length} description=" Runs" />
+        <Stat value={runs.length} description=" Activities" />
         <Stat value={sumDistance} description=" KM" />
         {SHOW_ELEVATION_GAIN && <Stat value={sumElevationGain} description=" Elevation Gain" />}
         <Stat value={avgPace} description=" Avg Pace" />
