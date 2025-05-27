@@ -25,8 +25,8 @@ const data: ISiteMetadataResult = {
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'Blog',
-      url: 'https://yiling615.github.io/',
+      name: 'Podcast',
+      url: 'https://yiling615.notion.site/podcast',
     },
     {
       name: 'About',
