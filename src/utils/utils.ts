@@ -328,16 +328,17 @@ const titleForRun = (run: Activity): string => {
       return run.name;
     }
   }
-
-  if (RICH_TITLE) {
-    
+  else{
     // 2. try to use location+type if the location is available, eg. 'Shanghai Run'
     const { city, province } = locationForRun(run);
     const activity_sport = getActivitySport(run);
     if (city && city.length > 0 && activity_sport.length > 0) {
       return `${city} ${activity_sport}`;
-    }
   }
+  }
+
+    
+  
   // 3. use time+length if location or type is not available
   const runDistance = run.distance / 1000;
   const runHour = +run.start_date_local.slice(11, 13);
