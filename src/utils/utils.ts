@@ -272,10 +272,10 @@ const getActivitySport = (act: Activity): string => {
     else if (act.subtype === 'treadmill') return ACTIVITY_TYPES.RUN_TREADMILL_TITLE;
     else return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
   }
-  else if (act.type === 'hiking') {
+  else if (act.type === 'Hike') {
     return ACTIVITY_TYPES.HIKING_TITLE;
   }
-  else if (act.type === 'cycling') {
+  else if (act.type === 'Ride') {
     return ACTIVITY_TYPES.CYCLING_TITLE;
   }
   else if (act.type === 'walking') {
