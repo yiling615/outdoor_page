@@ -90,6 +90,21 @@ const MONTHLY_TITLE = IS_CHINESE ? 'Month' : 'Monthly';
 const WEEKLY_TITLE = IS_CHINESE ? 'Week' : 'Weekly';
 const DAILY_TITLE = IS_CHINESE ? 'Day' : 'Daily';
 const LOCATION_TITLE = IS_CHINESE ? 'Location' : 'Location';
+const MORNING_TITLE = IS_CHINESE ? '晨间' : 'Morning';
+const MIDDAY_TITLE = IS_CHINESE ? '午间' : 'Midday';
+const AFTERNOON_TITLE = IS_CHINESE ? '午后' : 'Afternoon';
+const DUSK_TITLE = IS_CHINESE ? '傍晚' : 'DUSK';
+const EVENING_TITLE = IS_CHINESE ? '晚间' : 'Evening';
+const NIGHT_TITLE = IS_CHINESE ? '深夜' : 'Night Run';
+
+const TIME_TITLES = {
+  MORNING_TITLE,
+  MIDDAY_TITLE,
+  AFTERNOON_TITLE,
+  DUSK_TITLE,
+  EVENING_TITLE,
+  NIGHT_TITLE,
+}
 
 const ACTIVITY_TYPES = {
   RUN_GENERIC_TITLE,
@@ -145,7 +160,8 @@ export {
   SHOW_ELEVATION_GAIN,
   RICH_TITLE,
   ACTIVITY_TYPES,
-  ACTIVITY_TOTAL
+  ACTIVITY_TOTAL,
+  TIME_TITLES
 };
 
 const nike = 'rgb(224,237,94)'; // if you want change the main color change here src/styles/variables.scss

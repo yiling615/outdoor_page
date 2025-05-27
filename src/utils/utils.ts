@@ -4,7 +4,7 @@ import { WebMercatorViewport } from 'viewport-mercator-project';
 import { chinaGeojson, RPGeometry } from '@/static/run_countries';
 import worldGeoJson from '@surbowl/world-geo-json-zh/world.zh.json';
 import { chinaCities } from '@/static/city';
-import { MAIN_COLOR, MUNICIPALITY_CITIES_ARR, NEED_FIX_MAP, RUN_TITLES, ACTIVITY_TYPES, RICH_TITLE, CYCLING_COLOR, HIKING_COLOR, WALKING_COLOR, SWIMMING_COLOR, RUN_COLOR, RUN_TRAIL_COLOR } from './const';
+import { MAIN_COLOR, MUNICIPALITY_CITIES_ARR, NEED_FIX_MAP, TIME_TITLES, RUN_TITLES, ACTIVITY_TYPES, RICH_TITLE, CYCLING_COLOR, HIKING_COLOR, WALKING_COLOR, SWIMMING_COLOR, RUN_COLOR, RUN_TRAIL_COLOR } from './const';
 import { FeatureCollection, LineString } from 'geojson';
 
 export type Coordinate = [number, number];
@@ -288,17 +288,49 @@ const getActivitySport = (act: Activity): string => {
   return "";
 }
 
+const timeForRun = (run: Activity): string => {
+  const runHour = +run.start_date_local.slice(11, 13);  
+
+  if (runHour >= 5 && runHour <= 9) {
+    return TIME_TITLES.MORNING_TITLE;
+  }
+  if (runHour > 9 && runHour <= 12) {
+    return TIME_TITLES.MIDDAY_TITLE;
+  }
+  if (runHour > 12 && runHour <= 15) {
+    return TIME_TITLES.AFTERNOON_TITLE;
+  }
+  if (runHour > 15 && runHour <= 18) {
+    return TIME_TITLES.DUSK_TITLE;
+  }
+  if (runHour > 18 && runHour <= 21) {
+    return TIME_TITLES.EVENING_TITLE;
+  }
+  return TIME_TITLES.NIGHT_TITLE;
+}
+
 const titleForRun = (run: Activity): string => {
+  if (run.type === 'Run'){
+    const runDistance = run.distance / 1000;
+    if (runDistance > 20 && runDistance < 40) {
+      return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
+    }
+    if (runDistance >= 40) {
+      return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
+    }
+  }
   if (RICH_TITLE) {
-    // 1. try to use user defined name
+    
+    // try to use time+type if the location is available, eg. 'Shanghai Run'
+    const { city, province } = locationForRun(run);
+    const time = timeForRun(run);
+    const activity_sport = getActivitySport(run);
+    if (activity_sport.length > 0) {
+      return `${time}${activity_sport}`;
+    }
+    //try to use user defined name
     if (run.name != '') {
       return run.name;
-    }
-    // 2. try to use location+type if the location is available, eg. 'Shanghai Run'
-    const { city, province } = locationForRun(run);
-    const activity_sport = getActivitySport(run);
-    if (city && city.length > 0 && activity_sport.length > 0) {
-      return `${city} ${activity_sport}`;
     }
   }
   // 3. use time+length if location or type is not available
