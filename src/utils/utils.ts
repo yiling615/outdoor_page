@@ -221,9 +221,9 @@ const colorForRun = (run: Activity): string => {
       }
       return RUN_COLOR;
     }
-    case 'cycling':
+    case 'Ride':
       return CYCLING_COLOR;
-    case 'hiking':
+    case 'Hike':
       return HIKING_COLOR;
     case 'walking':
       return WALKING_COLOR;
