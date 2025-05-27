@@ -17,7 +17,7 @@ const getBasePath = () => {
 const data: ISiteMetadataResult = {
   siteTitle: 'Outdoor Page',
   siteUrl: 'https://yiling.run',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+  logo: 'https://avatars.githubusercontent.com/u/143258245?v=4',
   description: 'Personal site and blog',
   navLinks: [
     {
