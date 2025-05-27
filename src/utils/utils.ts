@@ -225,7 +225,7 @@ const colorForRun = (run: Activity): string => {
       return CYCLING_COLOR;
     case 'Hike':
       return HIKING_COLOR;
-    case 'walking':
+    case 'Walk':
       return WALKING_COLOR;
     case 'swimming':
       return SWIMMING_COLOR;
@@ -278,7 +278,7 @@ const getActivitySport = (act: Activity): string => {
   else if (act.type === 'Ride') {
     return ACTIVITY_TYPES.CYCLING_TITLE;
   }
-  else if (act.type === 'walking') {
+  else if (act.type === 'Walk') {
     return ACTIVITY_TYPES.WALKING_TITLE;
   }
   // if act.type contains 'skiing'
@@ -310,27 +310,13 @@ const timeForRun = (run: Activity): string => {
 }
 
 const titleForRun = (run: Activity): string => {
-  if (run.type === 'Run'){
-    const runDistance = run.distance / 1000;
-    if (runDistance > 20 && runDistance < 40) {
-      return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
-    }
-    if (runDistance >= 40) {
-      return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
-    }
-  }
   if (RICH_TITLE) {
     
-    // try to use time+type if the location is available, eg. 'Shanghai Run'
+    // 2. try to use location+type if the location is available, eg. 'Shanghai Run'
     const { city, province } = locationForRun(run);
-    const time = timeForRun(run);
     const activity_sport = getActivitySport(run);
-    if (activity_sport.length > 0) {
-      return `${time}${activity_sport}`;
-    }
-    //try to use user defined name
-    if (run.name != '') {
-      return run.name;
+    if (city && city.length > 0 && activity_sport.length > 0) {
+      return `${city} ${activity_sport}`;
     }
   }
   // 3. use time+length if location or type is not available
