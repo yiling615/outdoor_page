@@ -310,6 +310,25 @@ const timeForRun = (run: Activity): string => {
 }
 
 const titleForRun = (run: Activity): string => {
+  if (run.type === 'Run'){
+    const runDistance = run.distance / 1000;
+    if (runDistance > 20 && runDistance < 40) {
+      return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
+    }
+    if (runDistance >= 40) {
+      return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
+    }
+    const time = timeForRun(run);
+    const activity_sport = getActivitySport(run);
+    if (activity_sport.length > 0) {
+      return `${time} ${activity_sport}`;
+    }
+    //try to use user defined name
+    if (run.name != '') {
+      return run.name;
+    }
+  }
+
   if (RICH_TITLE) {
     
     // 2. try to use location+type if the location is available, eg. 'Shanghai Run'
