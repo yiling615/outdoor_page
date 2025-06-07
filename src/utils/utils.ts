@@ -321,7 +321,7 @@ const titleForRun = (run: Activity): string => {
     const time = timeForRun(run);
     const activity_sport = getActivitySport(run);
     if (activity_sport.length > 0) {
-      return `${time} ${activity_sport}`;
+      return `${time}${activity_sport}`;
     }
     //try to use user defined name
     if (run.name != '') {
@@ -333,7 +333,7 @@ const titleForRun = (run: Activity): string => {
     const { city, province } = locationForRun(run);
     const activity_sport = getActivitySport(run);
     if (city && city.length > 0 && activity_sport.length > 0) {
-      return `${city} ${activity_sport}`;
+      return `${city}${activity_sport}`;
   }
   }
 
