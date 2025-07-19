@@ -173,7 +173,7 @@ export {
 
 // eslint-disable-next-line no-unused-vars
 const nike = 'rgb(224,237,94)';
-const yellow = 'rgb(224,237,94)';
+//const yellow = 'rgb(224,237,94)';
 const blue = 'rgb(85,234,237)';
 const pink = 'rgb(237,85,219)';
 const cyan = 'rgb(112,243,255)';
