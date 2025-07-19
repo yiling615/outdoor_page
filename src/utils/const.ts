@@ -31,7 +31,7 @@ const USE_GOOGLE_ANALYTICS = false;
 const GOOGLE_ANALYTICS_TRACKING_ID = '';
 
 // styling: set to `true` if you want dash-line route
-const USE_DASH_LINE = false;
+const USE_DASH_LINE = true;
 // styling: route line opacity: [0, 1]
 const LINE_OPACITY = 0.6;
 // styling: map height
@@ -43,7 +43,7 @@ const ROAD_LABEL_DISPLAY = true;
 const PRIVACY_MODE = false;
 // update for now 2024/11/17 the lights on default is false
 //set to `false` if you want to make light off as default, only effect when `PRIVACY_MODE` = false
-const LIGHTS_ON = false;
+const LIGHTS_ON = true;
 //set to `true` if you want to show the 'Elevation Gain' column
 const SHOW_ELEVATION_GAIN = true;
 // richer title for the activity types (like garmin style)
@@ -174,7 +174,7 @@ export {
 // eslint-disable-next-line no-unused-vars
 const nike = 'rgb(224,237,94)';
 const yellow = 'rgb(224,237,94)';
-const green = 'rgb(0,237,94)';
+const blue = 'rgb(85,234,237)';
 const pink = 'rgb(237,85,219)';
 const cyan = 'rgb(112,243,255)';
 const IKB = 'rgb(0,47,167)';
@@ -188,8 +188,8 @@ const red = 'rgb(255,0,0)'; //大红色
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
 export const MAIN_COLOR = nike;
-export const RUN_COLOR = yellow;
-export const RIDE_COLOR = green;
+export const RUN_COLOR = nike;
+export const RIDE_COLOR = blue;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
 export const HIKE_COLOR = pink;
 export const SWIM_COLOR = gold;
@@ -204,15 +204,15 @@ export const TRAIL_RUN_COLOR = IKB;
 
 // map tiles vendor, maptiler or mapbox or stadiamaps
 // if you want to use maptiler, set the access token in MAP_TILE_ACCESS_TOKEN
-export const MAP_TILE_VENDOR = 'mapbox';
+export const MAP_TILE_VENDOR = 'maptiler';
 
 // map tiles style name, see MAP_TILE_STYLES for more details
-export const MAP_TILE_STYLE = 'dark-v10';
+export const MAP_TILE_STYLE = 'outdoor-dark2';
 
 // access token. you can apply a new one, it's free.
 // maptiler: Gt5R0jT8tuIYxW6sNrAg | sign up at https://cloud.maptiler.com/auth/widget
 // stadiamaps: 8a769c5a-9125-4936-bdcf-a6b90cb5d0a4 |sign up at https://client.stadiamaps.com/signup/
-export const MAP_TILE_ACCESS_TOKEN = 'Gt5R0jT8tuIYxW6sNrAg';
+export const MAP_TILE_ACCESS_TOKEN = '64Awe2zEwrdlXofmdiNy';
 
 export const MAP_TILE_STYLES = {
   maptiler: {
@@ -223,6 +223,8 @@ export const MAP_TILE_STYLES = {
       'https://api.maptiler.com/maps/streets-v2-dark/style.json?key=',
     'outdoor-dark':
       'https://api.maptiler.com/maps/outdoor-v2-dark/style.json?key=',
+    'outdoor-dark2':
+      'https://api.maptiler.com/maps/0197ba50-e499-7927-b803-39c68c9b5f21/?key='
     'bright-dark':
       'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
     'topo-dark': 'https://api.maptiler.com/maps/topo-v2-dark/style.json?key=',
