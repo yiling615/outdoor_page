@@ -224,7 +224,7 @@ export const MAP_TILE_STYLES = {
     'outdoor-dark':
       'https://api.maptiler.com/maps/outdoor-v2-dark/style.json?key=',
     'outdoor-dark2':
-      'https://api.maptiler.com/maps/0197ba50-e499-7927-b803-39c68c9b5f21/?key=',
+      'https://api.maptiler.com/maps/0197ba50-e499-7927-b803-39c68c9b5f21/style.json?key=',
     'bright-dark':
       'https://api.maptiler.com/maps/bright-v2-dark/style.json?key=',
     'topo-dark': 'https://api.maptiler.com/maps/topo-v2-dark/style.json?key=',
