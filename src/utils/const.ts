@@ -31,7 +31,7 @@ const USE_GOOGLE_ANALYTICS = false;
 const GOOGLE_ANALYTICS_TRACKING_ID = '';
 
 // styling: set to `true` if you want dash-line route
-const USE_DASH_LINE = false;
+const USE_DASH_LINE = true;
 // styling: route line opacity: [0, 1]
 const LINE_OPACITY = 0.6;
 // styling: map height - responsive design
@@ -44,7 +44,7 @@ const ROAD_LABEL_DISPLAY = true;
 const PRIVACY_MODE = false;
 // updated on 2024/11/17: lights are turned off by default
 //set to `false` if you want to make light off as default, only effect when `PRIVACY_MODE` = false
-const LIGHTS_ON = false;
+const LIGHTS_ON = true;
 //set to `true` if you want to show the 'Elevation Gain' column
 const SHOW_ELEVATION_GAIN = true;
 // richer title for the activity types (like garmin style)
@@ -245,16 +245,16 @@ export const COUNTRY_FILL_COLOR = dark_vanilla;
 
 // map tiles vendor, maptiler or mapbox or stadiamaps
 // if you want to use maptiler, set the access token in MAP_TILE_ACCESS_TOKEN
-export const MAP_TILE_VENDOR = 'mapbox';
+export const MAP_TILE_VENDOR = 'maptiler';
 
 // map tiles style name, see MAP_TILE_STYLES for more details
-export const MAP_TILE_STYLE_LIGHT = 'light-v10';
-export const MAP_TILE_STYLE_DARK = 'dark-v10';
+export const MAP_TILE_STYLE_LIGHT = 'winter-light';
+export const MAP_TILE_STYLE_DARK = 'winter-dark';
 
 // access token. you can apply a new one, it's free.
 // maptiler: Gt5R0jT8tuIYxW6sNrAg | sign up at https://cloud.maptiler.com/auth/widget
 // stadiamaps: 8a769c5a-9125-4936-bdcf-a6b90cb5d0a4 | sign up at https://client.stadiamaps.com/signup/
-export const MAP_TILE_ACCESS_TOKEN = 'Gt5R0jT8tuIYxW6sNrAg';
+export const MAP_TILE_ACCESS_TOKEN = 'EDVasimn3jOguABufKJX';
 
 export const MAP_TILE_STYLES = {
   maptiler: {
@@ -276,7 +276,7 @@ export const MAP_TILE_STYLES = {
     'topo-dark': 'https://api.maptiler.com/maps/topo-v2-dark/style.json?key=',
     'winter-light': 'https://api.maptiler.com/maps/winter-v2/style.json?key=',
     'winter-dark':
-      'https://api.maptiler.com/maps/winter-v2-dark/style.json?key=',
+      'https://api.maptiler.com/maps/0197ba50-e499-7927-b803-39c68c9b5f21/style.json?key=',
     hybrid: 'https://api.maptiler.com/maps/hybrid/style.json?key=',
   },
 
