@@ -50,8 +50,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* const nike = 'rgb(224,237,94)'; */
-    --color-brand: #00ed5e;
-    --color-secondary: #00ff00;
+    --color-brand: #acbcf9;
+    --color-secondary: #ccd94a;
     --color-bg: var(--color-neutral-900);
     --color-tx: var(--color-brand);
     --color-hr: var(--color-red-500);
@@ -70,8 +70,8 @@
 
 /* 2. Manual Override (Higher Priority) */
 [data-theme='light'] {
-  --color-brand: var(--color-violet-600);
-  --color-secondary: var(--color-violet-500);
+  --color-brand: #2563eb; /* Bright blue primary */
+  --color-secondary: #f59e0b; /* Amber secondary */
   --color-bg: var(--color-neutral-100);
   --color-tx: var(--color-violet-500);
   --color-hr: var(--color-neutral-300);
@@ -90,8 +90,8 @@
 
 [data-theme='dark'] {
   /* const nike = 'rgb(224,237,94)'; */
-  --color-brand: #00ed5e;
-  --color-secondary: #00ff00;
+  --color-brand: #acbcf9;
+  --color-secondary: #ccd94a;
   --color-bg: var(--color-neutral-900);
   --color-tx: var(--color-brand);
   --color-hr: var(--color-red-500);
