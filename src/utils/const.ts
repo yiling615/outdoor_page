@@ -192,10 +192,10 @@ const yellow_compl = 'rgb(106, 94, 237)';
 const green = 'rgb(0,237,94)';
 const pink = 'rgb(237,85,219)';
 const cyan = 'rgb(112,243,255)';
-const IKB = 'rgb(0,47,167)';
+const IKB = '#2563eb';
 const dark_vanilla = 'rgb(228,212,220)';
 const gold = 'rgb(242,190,69)';
-const purple = 'rgb(154,118,252)';
+const purple = '#acbcf9';
 const purple2 = 'rgb(127, 34, 254)';
 const veryPeri = 'rgb(105,106,173)'; //长春花蓝
 const red = 'rgb(255,0,0)'; //大红色
@@ -234,7 +234,7 @@ export const getRuntimeSingleColor = (
 
 // Legacy export for backwards compatibility
 export const RUN_COLOR = [yellow, yellow_compl];
-export const RIDE_COLOR = [green, green];
+export const RIDE_COLOR = [purple, IKB];
 export const VIRTUAL_RIDE_COLOR = [veryPeri, veryPeri];
 export const HIKE_COLOR = [pink, pink];
 export const SWIM_COLOR = [gold, gold];
