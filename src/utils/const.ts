@@ -199,6 +199,7 @@ const purple = '#acbcf9';
 const purple2 = 'rgb(127, 34, 254)';
 const veryPeri = 'rgb(105,106,173)'; //长春花蓝
 const red = 'rgb(255,0,0)'; //大红色
+const orange = 'rgba(255, 123, 0, 1)'
 
 // If your map has an offset please change this line
 // issues #92 and #198
@@ -236,7 +237,7 @@ export const getRuntimeSingleColor = (
 export const RUN_COLOR = [yellow, yellow_compl];
 export const RIDE_COLOR = [purple, IKB];
 export const VIRTUAL_RIDE_COLOR = [veryPeri, veryPeri];
-export const HIKE_COLOR = [pink, pink];
+export const HIKE_COLOR = [orange, orange];
 export const SWIM_COLOR = [gold, gold];
 export const ROWING_COLOR = [cyan, cyan];
 export const ROAD_TRIP_COLOR = [purple, purple];

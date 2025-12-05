@@ -55,7 +55,7 @@
     --color-bg: var(--color-neutral-900);
     --color-tx: var(--color-brand);
     --color-hr: var(--color-red-500);
-    --color-selected: var(--color-brand);
+    --color-selected: #acbcf9;
     --color-run-date: var(--color-neutral-300);
     --color-run-table-thead: var(--color-zinc-300);
     --color-run-row-hover-background: var(--color-neutral-800);
@@ -75,7 +75,7 @@
   --color-bg: var(--color-neutral-100);
   --color-tx: var(--color-violet-500);
   --color-hr: var(--color-neutral-300);
-  --color-selected: var(--color-violet-500);
+  --color-selected: #3b82f6;
   --color-run-date: var(--color-neutral-800);
   --color-run-table-thead: var(--color-neutral-800);
   --color-run-row-hover-background: var(--color-neutral-200);
