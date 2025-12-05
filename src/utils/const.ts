@@ -200,16 +200,17 @@ const purple2 = 'rgb(127, 34, 254)';
 const veryPeri = 'rgb(105,106,173)'; //长春花蓝
 const red = 'rgb(255,0,0)'; //大红色
 const orange = 'rgba(255, 123, 0, 1)'
+const black = 'rgb(0,0,0)' //边界
 
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = purple2;
-export const MAIN_COLOR_LIGHT = purple;
+export const MAIN_COLOR = black;
+export const MAIN_COLOR_LIGHT = black;
 
 // Static color constants
 export const RUN_COLOR_LIGHT = '#47b8e0';
-export const RUN_COLOR_DARK = MAIN_COLOR;
+export const RUN_COLOR_DARK = '#acbcf9';
 
 // Single run animation colors
 export const SINGLE_RUN_COLOR_LIGHT = '#52c41a'; // Green for light theme
